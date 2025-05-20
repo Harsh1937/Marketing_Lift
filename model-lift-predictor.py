@@ -18,7 +18,7 @@ from sklift.metrics import uplift_at_k, qini_auc_score
 
 
 # Load Data
-df = pd.read_csv("/Users/harshshah/Desktop/Automation/GIT/Online_Retail.csv", encoding="ISO-8859-1")
+df = pd.read_csv("/Users/harshshah/Online_Retail.csv", encoding="ISO-8859-1")
 # Drop rows with missing CustomerID or Description
 df.dropna(subset=['CustomerID', 'Description'], inplace=True)
 
@@ -71,7 +71,6 @@ qini_score = qini_auc_score(y_true=y_test, uplift=uplift_preds, treatment=treat_
 print(f"Qini AUC Score: {qini_score:.2f}")
 
 
-# In[ ]:
 
 
 
